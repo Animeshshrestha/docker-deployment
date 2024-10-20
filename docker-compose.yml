@@ -11,6 +11,8 @@ services:
     working_dir: /go/src/app
     container_name: docker_app
     command: sh -c "echo 'package main; import (\"net/http\"; \"log\"); func main() { http.HandleFunc(\"/\", func(w http.ResponseWriter, r *http.Request) { w.Write([]byte(\"Hello, World!\")); }); log.Fatal(http.ListenAndServe(\":8080\", nil)) }' > main.go && go run main.go"
+    networks:
+      - docker-deployment
   db:
     image: postgres:13
     ports:

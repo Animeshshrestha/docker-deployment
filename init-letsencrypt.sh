@@ -68,6 +68,10 @@ request_cert() {
   # Enable staging mode if needed
   if [ $staging != "0" ]; then staging_arg="--staging"; fi
 
+  echo "Printing the inputs required for certbot"
+  echo $email_arg
+  echo $email
+  echo $rsa_key_size
   if [ "$method" == "webroot" ]; then
     # Run Certbot with webroot method
     docker-compose run --rm --entrypoint "\
