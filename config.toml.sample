@@ -1,0 +1,18 @@
+[app]
+# Interface and port where the app will run its webserver.  The default value
+# of localhost will only listen to connections from the current machine. To
+# listen on all interfaces use '0.0.0.0'. To listen on the default web address
+# port, use port 80 (this will require running with elevated permissions).
+address = "localhost:8080"
+
+# Database.
+[db]
+host = "localhost"
+port = 5432
+user = "docker"
+password = "docker"
+database = "docker"
+ssl_mode = "disable"
+max_open = 25
+max_idle = 25
+max_lifetime = "300s"
