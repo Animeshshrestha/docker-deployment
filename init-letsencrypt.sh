@@ -4,7 +4,7 @@ rsa_key_size=4096
 data_path="./data/certbot"
 email="<@youremail.com>" # Adding a valid address is strongly recommended
 staging=0 # Set to 1 if you're testing your setup to avoid hitting request limits
-method=$1 # Method argument: either 'webroot' or 'dns-route53'
+method="webroot" # Method argument: either 'webroot' or 'dns-route53'
 
 # Load environment variables from .env file
 if [ -f .env ]; then
