@@ -4,6 +4,11 @@
 
 `init-letsencrypt.sh` automates obtaining an SSL certificate from Let’s Encrypt using Certbot in a Docker environment. It loads AWS credentials, sets up TLS configurations, creates a temporary certificate for Nginx, requests the real certificate using either the webroot or dns-route53 method, and reloads Nginx to apply the certificate.
 
+### Video Demonstration
+
+[<img width="898" alt="image" src="https://github.com/user-attachments/assets/4b4705c0-9ab1-40a5-b28c-2ff077637b72">](https://youtu.be/3PeZty4ZgvY?si=mNY8hXbb0bOqs0vk)
+
+
 ## Features
 
 - Automatically downloads recommended TLS configuration files for Nginx.
